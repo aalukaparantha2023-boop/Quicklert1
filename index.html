@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1220" />
+    <meta name="description" content="Quicklert alert dashboard" />
     <title>Quicklert</title>
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,20 +23,20 @@
           </div>
         </div>
 
-        <nav class="nav">
-          <button class="nav-item active" data-filter="all">
+        <nav class="nav" aria-label="Alert filters">
+          <button class="nav-item active" data-filter="all" type="button">
             <span>All alerts</span>
             <strong id="count-all">0</strong>
           </button>
-          <button class="nav-item" data-filter="urgent">
+          <button class="nav-item" data-filter="urgent" type="button">
             <span>Urgent</span>
             <strong id="count-urgent">0</strong>
           </button>
-          <button class="nav-item" data-filter="normal">
+          <button class="nav-item" data-filter="normal" type="button">
             <span>Normal</span>
             <strong id="count-normal">0</strong>
           </button>
-          <button class="nav-item" data-filter="done">
+          <button class="nav-item" data-filter="done" type="button">
             <span>Completed</span>
             <strong id="count-done">0</strong>
           </button>
@@ -65,7 +68,7 @@
               <option value="normal">Normal</option>
               <option value="urgent">Urgent</option>
             </select>
-            <button id="addButton" class="primary-btn">Add alert</button>
+            <button id="addButton" class="primary-btn" type="button">Add alert</button>
           </div>
           <textarea id="messageInput" maxlength="220" placeholder="Add quick context or a note..."></textarea>
         </section>
@@ -73,7 +76,7 @@
         <section class="list-panel">
           <div class="section-head">
             <h3>Recent items</h3>
-            <button id="clearDoneButton" class="ghost-btn">Clear completed</button>
+            <button id="clearDoneButton" class="ghost-btn" type="button">Clear completed</button>
           </div>
           <div id="alertList" class="alert-list" aria-live="polite"></div>
         </section>
