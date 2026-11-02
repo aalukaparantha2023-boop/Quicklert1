@@ -1,0 +1,9 @@
+{
+  "appId": "com.quicklert.app",
+  "appName": "Quicklert",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
