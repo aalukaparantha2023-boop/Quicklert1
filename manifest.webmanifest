@@ -1,0 +1,11 @@
+{
+  "name": "Quicklert",
+  "short_name": "Quicklert",
+  "description": "Quicklert is a lightweight alert dashboard built as a simple front-end web app.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0d1220",
+  "theme_color": "#0d1220",
+  "orientation": "portrait-primary",
+  "icons": []
+}
