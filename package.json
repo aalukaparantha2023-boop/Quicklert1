@@ -1,0 +1,18 @@
+{
+  "name": "Quicklert",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quicklert Android wrapper project",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "cap:add": "npx cap add android",
+    "cap:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/android": "^6.1.2"
+  }
+}
