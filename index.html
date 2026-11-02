@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicklert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="logo">Q</div>
+          <div>
+            <p class="eyebrow">workspace</p>
+            <h1>Quicklert</h1>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-filter="all">
+            <span>All alerts</span>
+            <strong id="count-all">0</strong>
+          </button>
+          <button class="nav-item" data-filter="urgent">
+            <span>Urgent</span>
+            <strong id="count-urgent">0</strong>
+          </button>
+          <button class="nav-item" data-filter="normal">
+            <span>Normal</span>
+            <strong id="count-normal">0</strong>
+          </button>
+          <button class="nav-item" data-filter="done">
+            <span>Completed</span>
+            <strong id="count-done">0</strong>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">dashboard</p>
+            <h2>Today’s alerts</h2>
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <span>Total</span>
+              <strong id="total-alerts">0</strong>
+            </div>
+            <div class="stat-card accent">
+              <span>Open</span>
+              <strong id="open-alerts">0</strong>
+            </div>
+          </div>
+        </header>
+
+        <section class="composer">
+          <div class="input-row">
+            <input id="titleInput" type="text" maxlength="80" placeholder="Alert title" />
+            <select id="priorityInput" aria-label="Priority">
+              <option value="normal">Normal</option>
+              <option value="urgent">Urgent</option>
+            </select>
+            <button id="addButton" class="primary-btn">Add alert</button>
+          </div>
+          <textarea id="messageInput" maxlength="220" placeholder="Add quick context or a note..."></textarea>
+        </section>
+
+        <section class="list-panel">
+          <div class="section-head">
+            <h3>Recent items</h3>
+            <button id="clearDoneButton" class="ghost-btn">Clear completed</button>
+          </div>
+          <div id="alertList" class="alert-list" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
